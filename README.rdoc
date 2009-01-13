@@ -85,7 +85,7 @@ The +vixplode+ command will backup & symlink any files named <tt>.[filename]</tt
 
     - For Mac-users: MacVim comes with this built in, but you may want to check your 'terminal' version of VIM if you want to be able to use +vi+ in the terminal with the same feature-set. If you have [MacPorts](http://www.macports.org/) installed, you should be able to just run:
 
-        sudo port install vim+ruby
+        sudo port install vim +ruby
 
       ...and be all set.
 
