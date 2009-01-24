@@ -89,9 +89,20 @@ The +vixplode+ command will backup & symlink any files named <tt>.[filename]</tt
 
       ...and be all set.
 
+    - For Linux/Unix users missing the <tt>+ruby</tt> in the <tt>:version</tt> output: You should be able to run:
+
+        sudo apt-get install vim-common vim-runtime vim-gnome
+
+      ...and be all set.
+
 - A 256-color-capable terminal application
 
   - For Mac-users: As of Version 2.0.1, build 240, Terminal.app on Mac OS X (10.5.5) does not meet this requirement. [iTerm](http://iterm.sourceforge.net/) does. Other applications may as well (recommendations welcome)...
+
+  - For Linux/Unix users: You need to have <tt>ncurses-term</tt> installed. On apt-based systems, run:
+
+      sudo apt-get install ncurses-term
+
 
 == INSTALL:
 
