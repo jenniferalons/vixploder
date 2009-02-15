@@ -1,6 +1,5 @@
 require 'rubygems'
 require 'optparse'
-require 'highline'
 require 'ftools'
 
 module Vixplode
@@ -47,7 +46,7 @@ module Vixplode
       end
 
       # copy current .vimrc file to ~/vixploder_vim_backups
-      ["~/.vimrc", "~/.vim", "~/.gvimrc", "~/.aliases"].each do |file|
+      ["~/.vimrc", "~/.vim", "~/.gvimrc", "~/.aliases", "~/.screenrc"].each do |file|
         file_to_backup = File.expand_path(file)
         puts "Attempting to back up '#{file_to_backup}' to '#{backup_directory}'"
         if File.exists?(file_to_backup)

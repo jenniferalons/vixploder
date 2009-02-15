@@ -1,0 +1,87 @@
+#shell -$SHELL
+
+logfile $HOME/.screen.d/logs/%Y%m%d-%n.log
+deflog on
+
+startup_message off
+autodetach on
+multiuser on
+term xterm-256color
+
+defscrollback 10000
+
+#terminfo and termcap for nice 256 color terminal
+# allow bold colors - necessary for some reason
+attrcolor b ".I"
+
+# tell screen how to set colors. AB = background, AF=foreground
+termcapinfo xterm "Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm"
+termcapinfo xterm-color "Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm"
+termcapinfo xterm-256color "Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm"
+
+# erase background with current bg color
+defbce "on"
+
+# Set up Ctl + A <space> to list windows
+bind ' ' windowlist -b
+
+# Remove dangerous keybindings
+bind k
+bind W
+bind ^k
+bind .
+bind ^\
+bind \\
+bind ^h
+bind h
+bind ^Q
+bind q
+bind ^S
+bind s
+
+bind K kill
+bind W windowlist
+bind I login on
+bind O login off
+bind } history
+
+# This *removes* the binding for 'K'
+# # thus requireing you to enter the
+# # command via the command line, ie ":kill".
+# # This prevent accidental killing of your windows.
+
+screen $SHELL
+title "Editor"
+screen $SHELL
+title "Tests"
+
+bind = resize =
+bind + resize +1
+bind - resize -1
+bind _ resize max
+
+
+# Bits & pieces taken from: http://bit.ly/R8Rxz
+focus
+select 0
+
+caption splitonly "%{= K.}%-LW %{= BW}%50>[%n] %t %{-}%+Lw%<"
+hardstatus on
+hardstatus alwayslastline
+# some alternatives to try out
+# hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kC}%?%-Lw%?%{r}(%{G}%n*%f %t%?(%u)%?%{r})%{C}%?%+Lw%?%?%= %{g}][%{B} %d/%m %{W}%c %{g}]'
+# hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %d/%m %{W}%c %{g}]'
+# hardstatus string '%{= mK}%-Lw%{= KW}%50>%n%f* %t%{= mK}%+Lw%< %{= kG}%-=%D %d %M %Y %c:%s%{-}'
+# hardstatus string '%-Lw%{= KW}%50>%n%f* %t%{-}%+Lw%<'
+# hardstatus string '%{= KW}%-w%{= WK}%n zsh%{-}%+w'
+# hardstatus string "%{=b dw}%{=b dw}[ %h ] [ %= %?%{-b dc}%-Lw%?%{+b dk}(%{+b dw}%n:%t%{+b dk})%?(%u)%?%{-b dw}%?%{-b dc}%+Lw%? %{=b dk}%{=b dw}] [ %{-b dw}Load%{+b dk}: %{-b dc}%l %{=b dw}] [ %{-b dw}%{-b dc}%D %M %d %c:%s %Y%{=b dw} ]"
+# hardstatus string "%{=b dw}%{=b dw}[ %{-b dc}%h%{=b dw} ] [ %= %?%{-b dc}%-Lw%?%{+b dk}(%{+b dw}%n:%t%{+b dk})%?(%u)%?%{-b dw}%?%{-b dc}%+Lw%? %{=b dk}%{=b dw}] [%{-b dw} %1`%{=b dw} ]"
+# hardstatus string "%{+b d%{+b dw}[%{-b dg} %0C:%s%a %{=b dk}]-[ %{-b dw}Load%{+b dk}:%{-b dg}%l %{+b dk}] %h"
+# hardstatus string "%{=b kW}[ %{= Y}$USER @ %H %{b W}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{b W}][%{= Y} %m/%d/%y %{Y}%C %{b W}]"
+# hardstatus string "%{=b kW}[ %{= Y}$USER @ %H %{b W}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{b W}][%{= Y} %l %{b W}][%{= Y} %d/%m %{Y}%c %{b W}]"
+hardstatus string '%{=b bY} %D %02d/%02m %0c %{k}|%{G} %l %{k}|%{W} %-w%{=b dd}[%n] %t %{-}%+w %= %h'
+termcapinfo xterm* 'hs:ts=\E]0;:fs=\007:ds=\E]0;\007'
+defhstatus "screen ^E (^et) | $USER@^EH"
+hardstatus off
+#
+
