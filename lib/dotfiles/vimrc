@@ -12,9 +12,7 @@ set t_Co=256                    "Set terminal to 256 colors
 
 "-------- Syntax & coloring
 syntax on                       "Turns on syntax highlighting...SHOULD BE AFTER 't_Co' & 'term' declarations
-"colorscheme railscasts         "disabling until I get it linux-compatible
-colorscheme rubyblue
-
+colorscheme pyte                "disabling until I get it linux-compatible
 
 " Some of this was taken from or added to from the 'vimrc_example.vim' file
 " shipped with OS X
@@ -86,7 +84,7 @@ endif
 set foldmethod=syntax               "Syntax highlighting items specify folds
 
 "Not sure how I feel about these two yet
-"Commenting out...probably not 'sane default' people would expect. Leaving 
+"Commenting out...probably not 'sane default' people would expect. Leaving
 "for reference...
 "set foldopen=all                    "Auto-opens folds on all possible 'autocmds'
 "set foldclose=all                   "Auto-closes folds on all possible autocmds
@@ -104,7 +102,7 @@ set softtabstop=2       "Tabs are 2-spaces...using instead of 'tabstop' as per:
                         "  want for indentation is a much better strategy and will let other people work
                         "  with your code easily, too.'
                         "   -Comment by 'Jeremy' in"  Jamis Buck's 'VIM Follow-up'
-                        "    article, http://bit.ly/BRG8 
+                        "    article, http://bit.ly/BRG8
 
 set shiftwidth=2        "Number of spaces to use for each step of (auto)indent
 set expandtab           "Replace "tab" characters with the number of  spaces defined
@@ -207,6 +205,7 @@ noremap <C-d> :NERDTreeToggle<CR>
 "-------- FuzzyFinderTextmate plugin settings
 "Limit the number of matches returned to 50 in FuzzyFinder searches
 let g:fuzzy_matching_limit='50'
+let g:fuzzy_ceiling='10000'
 
 "Ignore the following glob file patters in FuzzyFinder searches
 let g:fuzzy_ignore='*.log'
@@ -249,6 +248,7 @@ noremap tt :tabnew<CR>
 
 "-------- Autocommands
 autocmd! BufWritePost .vimrc source %
+autocmd BufWritePre * :%s/\s\+$//e
 
 "-------- Abbreviations
 "Some lorem ispum text
