@@ -46,7 +46,18 @@ module Vixplode
       end
 
       # copy current .vimrc file to ~/vixploder_vim_backups
-      ["~/.vimrc", "~/.vim", "~/.gvimrc", "~/.aliases", "~/.screenrc"].each do |file|
+      files_to_backup = [
+                          "~/.aliases",
+                          "~/.bashrc",
+                          "~/.gitconfig",
+                          "~/.gitignore",
+                          "~/.gvimrc",
+                          "~/.screenrc",
+                          "~/.tmux.conf",
+                          "~/.vim",
+                          "~/.vimrc"
+                        ]
+      files_to_backup.each do |file|
         file_to_backup = File.expand_path(file)
         puts "Attempting to back up '#{file_to_backup}' to '#{backup_directory}'"
         if File.exists?(file_to_backup)

@@ -1,0 +1,38 @@
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+export HISTCONTROL=erasedups
+export HISTSIZE=10000
+export EDITOR=vim
+shopt -s histappend
+bind '"\e[A":history-search-backward'
+bind '"\e[B":history-search-forward'
+
+# function parse_git_branch {
+#   ref=$(git-symbolic-ref HEAD 2> /dev/null) || return
+#     echo "("${ref#refs/heads/}")"
+#   }
+
+function parse_git_branch {
+  local ref=$(git symbolic-ref HEAD 2> /dev/null)
+    if [[ -n $ref ]]; then
+      echo `expr "$ref" : 'refs/heads/\(.*\)'`
+    fi
+  }
+
+PS1="\$(parse_git_branch)> "
+
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+  . `brew --prefix`/etc/bash_completion
+fi
+
+# MacVim terminal
+alias vi='mvim -v'
+alias vim='mvim -v'
+alias view='mview -v'
+alias vimdiff='mvimdiff -v'
+alias vimex='mvimex -v'
+alias tmux-set-current-path='pwd | xargs tmux set-option default-path'
+
+export RUBY_HEAP_MIN_SLOTS=600000
+export RUBY_GC_MALLOC_LIMIT=59000000
+export RUBY_HEAP_FREE_MIN=100000

@@ -1,0 +1,38 @@
+[core]
+  excludesfile = ~/.gitignore
+
+[user]
+  name = "Jennifer Alons"
+  email = "jalons@groupon.com"
+
+[color]
+  ui = true
+
+[color "branch"]
+  current = cyan
+  local = yellow
+  remote = magenta
+
+[color "diff"]
+  meta = yellow
+  frag = magenta
+  old = red
+  new = cyan
+  whitespace = red reverse
+
+[color "status"]
+  added = yellow
+  changed = magenta
+  untracked = cyan
+
+[core]
+  whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+
+[alias]
+  st = status
+  ci = commit
+  co = checkout
+  br = branch
+  lg = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
+[rerere]
+	enabled = 1
