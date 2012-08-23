@@ -36,3 +36,16 @@ alias tmux-set-current-path='pwd | xargs tmux set-option default-path'
 export RUBY_HEAP_MIN_SLOTS=600000
 export RUBY_GC_MALLOC_LIMIT=59000000
 export RUBY_HEAP_FREE_MIN=100000
+
+export TMUX_SESSION=$USER
+export TMUX_SOCKET_PATH="/tmp/jalons-air"
+
+if [[ -z $TMUX ]]; then
+  # ** TMUX ATULOGIN **
+  # Check for existing session and attach if present
+  tmux -S $TMUX_SOCKET_PATH has-session -t $TMUX_SESSION &>/dev/null
+  if [[ $? -ne 0 ]]; then
+    tmux -S $TMUX_SOCKET_PATH new-session -d -s $TMUX_SESSION
+  fi
+  tmux -S $TMUX_SOCKET_PATH attach-session -t $TMUX_SESSION &>/dev/null
+fi
