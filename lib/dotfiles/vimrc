@@ -16,6 +16,7 @@ Bundle 'tsaleh/vim-matchit'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-endwise'
 Bundle 'vim-ruby/vim-ruby'
+Bundle 'ajwalters/tmux-background-job'
 
 "
 " Brief help
@@ -61,6 +62,9 @@ map <Leader>p :set paste!<CR>
 map <Leader>x :close<CR>
 map <Leader>h :noh<CR>
 map <Leader>m :MRU 
+
+map <Leader>s :TmuxBackgroundJob<CR>
+map <Leader>r :TmuxRerunBackgroundJob<CR>
 
 map <Leader>gg :Ggrep 
 map <Leader>gs :Gstatus<CR>
