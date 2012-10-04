@@ -40,6 +40,10 @@ export RUBY_HEAP_FREE_MIN=100000
 export TMUX_SESSION=$USER
 export TMUX_SOCKET_PATH="/tmp/jalons-air"
 
+function curl-switchfly {
+  curl "https://groupon-uat.switchfly.com/api/api.cfm" "${@}"
+}
+
 if [[ -z $TMUX ]]; then
   # ** TMUX ATULOGIN **
   # Check for existing session and attach if present
