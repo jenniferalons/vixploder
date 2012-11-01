@@ -17,7 +17,8 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-endwise'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'ajwalters/tmux-background-job'
-Bundle 'hashrocket/slurper'
+Bundle 'adamlowe/vim-slurper'
+Bundle 'jnwhiteh/vim-golang'
 
 "
 " Brief help
