@@ -19,6 +19,7 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'ajwalters/tmux-background-job'
 Bundle 'adamlowe/vim-slurper'
 Bundle 'jnwhiteh/vim-golang'
+Bundle 'tpope/vim-unimpaired'
 
 "
 " Brief help
