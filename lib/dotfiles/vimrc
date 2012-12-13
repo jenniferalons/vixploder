@@ -20,6 +20,7 @@ Bundle 'ajwalters/tmux-background-job'
 Bundle 'adamlowe/vim-slurper'
 Bundle 'jnwhiteh/vim-golang'
 Bundle 'tpope/vim-unimpaired'
+Bundle 'tpope/vim-commentary'
 
 "
 " Brief help

@@ -2,3 +2,4 @@
 *.swp
 .tmux-background-job.conf
 zeus.json
+tags
