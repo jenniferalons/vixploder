@@ -1,5 +1,3 @@
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
 export HISTCONTROL=erasedups
 export HISTSIZE=10000
 export EDITOR=vim
@@ -43,6 +41,8 @@ export TMUX_SOCKET_PATH="/tmp/jalons-air"
 function curl-switchfly {
   curl "https://groupon-uat.switchfly.com/api/api.cfm" "${@}"
 }
+
+export PATH=$PATH:$HOME/.rvm/bin
 
 if [[ -z $TMUX ]]; then
   # ** TMUX ATULOGIN **
