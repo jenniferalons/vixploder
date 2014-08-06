@@ -62,12 +62,12 @@ set splitright
 " Leader + Custom Mappings
 let mapleader = ","
 
-" -- Toggle Line Numbers
 map <Leader>n :set number!<CR>
 map <Leader>p :set paste!<CR>
 map <Leader>x :close<CR>
 map <Leader>h :noh<CR>
 map <Leader>m :MRU 
+map <Leader>l :ls<CR>
 
 map <Leader>s :TmuxBackgroundJob<CR>
 map <Leader>r :TmuxRerunBackgroundJob<CR>
@@ -75,6 +75,9 @@ map <Leader>r :TmuxRerunBackgroundJob<CR>
 map <Leader>gg :Ggrep 
 map <Leader>gs :Gstatus<CR>
 map <Leader>gd :Gdiff<CR>
+
+" Folds
+map <Leader>f :set fdm=indent<CR>
 
 " -- Tabs
 map <Leader>1 :tabnext 1<CR>

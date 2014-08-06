@@ -3,3 +3,5 @@
 .tmux-background-job.conf
 zeus.json
 tags
+.lein-repl-history
+*.bak
