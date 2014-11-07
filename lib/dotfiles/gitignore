@@ -5,3 +5,4 @@ zeus.json
 tags
 .lein-repl-history
 *.bak
+*.swo
