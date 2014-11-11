@@ -6,3 +6,5 @@ tags
 .lein-repl-history
 *.bak
 *.swo
+slurper_config.yml
+*.slurper
