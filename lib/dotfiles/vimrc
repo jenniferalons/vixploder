@@ -100,6 +100,8 @@ setlocal lispwords+=testing,deftest
 
 " autocmds
 if has("autocmd")
+  autocmd! BufWritePre *.rb :%s/\s\+$//e
+  autocmd! BufWritePre *.clj :%s/\s\+$//e
   autocmd! BufWritePost .vimrc source %
 endif " has("autocmd")
 
