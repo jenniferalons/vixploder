@@ -29,7 +29,7 @@ function bundle_open {
 
 alias tmux-set-current-path='pwd | xargs tmux set-option default-path'
 
-alias emacs='/usr/local/Cellar/emacs/24.3/bin/emacs'
+# alias emacs='/usr/local/Cellar/emacs/24.3/bin/emacs'
 
 export RUBY_HEAP_MIN_SLOTS=600000
 export RUBY_GC_MALLOC_LIMIT=59000000
