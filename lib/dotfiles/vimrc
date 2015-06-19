@@ -11,7 +11,7 @@ Bundle 'gmarik/vundle'
 
 Bundle 'tpope/vim-fugitive'
 Bundle 'git://git.wincent.com/command-t.git'
-Bundle 'vim-scripts/VimClojure'
+" Bundle 'vim-scripts/VimClojure'
 Bundle 'tsaleh/vim-matchit'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-endwise'
@@ -23,6 +23,11 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-commentary'
 Bundle 'aklt/plantuml-syntax'
 Bundle 'scrooloose/nerdtree'
+Bundle 'tpope/vim-fireplace'
+Bundle 'guns/vim-clojure-static'
+Bundle 'guns/vim-clojure-highlight'
+Bundle 'kien/rainbow_parentheses.vim'
+Bundle 'tpope/vim-salve'
 " Bundle 'jimenezrick/vimerl'
 
 "
@@ -54,10 +59,37 @@ set undolevels=1000                             " keep 1000 undos
 set hlsearch
 set laststatus=2                                " always show filenames
 
-let g:vimclojure#HighlightBuiltins = 1
-let g:vimclojure#ParenRainbow = 1
+" let g:vimclojure#HighlightBuiltins = 1
+" let g:vimclojure#ParenRainbow = 1
 
 let g:CommandTMaxFiles=50000
+
+let NERDTreeShowHidden=1
+
+let g:rbpt_colorpairs = [
+      \ ['brown',       'RoyalBlue3'],
+      \ ['Darkblue',    'SeaGreen3'],
+      \ ['darkgray',    'DarkOrchid3'],
+      \ ['darkgreen',   'firebrick3'],
+      \ ['darkcyan',    'RoyalBlue3'],
+      \ ['darkred',     'SeaGreen3'],
+      \ ['darkmagenta', 'DarkOrchid3'],
+      \ ['brown',       'firebrick3'],
+      \ ['gray',        'RoyalBlue3'],
+      \ ['darkmagenta', 'DarkOrchid3'],
+      \ ['Darkblue',    'firebrick3'],
+      \ ['darkgreen',   'RoyalBlue3'],
+      \ ['darkcyan',    'SeaGreen3'],
+      \ ['darkred',     'DarkOrchid3'],
+      \ ]
+
+" let g:clojure_syntax_keywords = {
+"     \ 'clojureDefine': ["s/defn"],
+"     \ 'clojureFunc': ["s/either"],
+"     \ }
+
+let g:rbpt_max = 14
+let g:rbpt_loadcmd_toggle = 0
 
 set splitbelow
 set splitright
@@ -81,20 +113,26 @@ map <Leader>gd :Gdiff<CR>
 
 map <Leader><Leader> :NERDTreeToggle<CR>
 
-" Folds
-map <Leader>f :set fdm=indent<CR>
+map <Leader>E :Explore<CR>
 
-" -- Tabs
-map <Leader>1 :tabnext 1<CR>
-map <Leader>2 :tabnext 2<CR>
-map <Leader>3 :tabnext 3<CR>
-map <Leader>4 :tabnext 4<CR>
-map <Leader>5 :tabnext 5<CR>
-map <Leader>6 :tabnext 6<CR>
-map <Leader>7 :tabnext 7<CR>
-map <Leader>8 :tabnext 8<CR>
-map <Leader>9 :tabnext 9<CR>
-map <Leader>0 :tabnext 0<CR>
+" vim-fireplace
+map <Leader>e :Eval<CR>
+map <Leader>r :%Eval<CR>
+
+" " Folds
+" map <Leader>f :set fdm=indent<CR>
+
+" " -- Tabs
+" map <Leader>1 :tabnext 1<CR>
+" map <Leader>2 :tabnext 2<CR>
+" map <Leader>3 :tabnext 3<CR>
+" map <Leader>4 :tabnext 4<CR>
+" map <Leader>5 :tabnext 5<CR>
+" map <Leader>6 :tabnext 6<CR>
+" map <Leader>7 :tabnext 7<CR>
+" map <Leader>8 :tabnext 8<CR>
+" map <Leader>9 :tabnext 9<CR>
+" map <Leader>0 :tabnext 0<CR>
 
 setlocal lispwords+=testing,deftest
 
@@ -103,6 +141,8 @@ if has("autocmd")
   autocmd! BufWritePre *.rb :%s/\s\+$//e
   autocmd! BufWritePre *.clj :%s/\s\+$//e
   autocmd! BufWritePost .vimrc source %
+  autocmd! VimEnter * RainbowParenthesesActivate
+  autocmd! BufEnter * RainbowParenthesesLoadRound
 endif " has("autocmd")
 
 
