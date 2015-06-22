@@ -38,10 +38,6 @@ export RUBY_GC_HEAP_INIT_SLOTS=100000
 export TMUX_SESSION=$USER
 export TMUX_SOCKET_PATH="/tmp/jalons-mbp"
 
-function curl-switchfly {
-  curl "https://groupon-uat.switchfly.com/api/api.cfm" "${@}"
-}
-
 export PATH=$PATH:$HOME/.rvm/bin
 
 if [[ -z $TMUX ]]; then
