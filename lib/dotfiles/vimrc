@@ -66,29 +66,29 @@ let g:CommandTMaxFiles=50000
 
 let NERDTreeShowHidden=1
 
+" x037_LightSeaGreen
+" x174_LightPink3
+" x168_HotPink3
+" x214_Orange1
 let g:rbpt_colorpairs = [
       \ ['brown',       'RoyalBlue3'],
-      \ ['Darkblue',    'SeaGreen3'],
+      \ ['174',         'SeaGreen3'],
       \ ['darkgray',    'DarkOrchid3'],
       \ ['darkgreen',   'firebrick3'],
       \ ['darkcyan',    'RoyalBlue3'],
       \ ['darkred',     'SeaGreen3'],
       \ ['darkmagenta', 'DarkOrchid3'],
+      \ ['37',          'firebrick3'],
       \ ['brown',       'firebrick3'],
       \ ['gray',        'RoyalBlue3'],
       \ ['darkmagenta', 'DarkOrchid3'],
-      \ ['Darkblue',    'firebrick3'],
+      \ ['214',         'firebrick3'],
       \ ['darkgreen',   'RoyalBlue3'],
+      \ ['168',         'DarkOrchid3'],
       \ ['darkcyan',    'SeaGreen3'],
-      \ ['darkred',     'DarkOrchid3'],
       \ ]
 
-" let g:clojure_syntax_keywords = {
-"     \ 'clojureDefine': ["s/defn"],
-"     \ 'clojureFunc': ["s/either"],
-"     \ }
-
-let g:rbpt_max = 14
+let g:rbpt_max = 15
 let g:rbpt_loadcmd_toggle = 0
 
 set splitbelow

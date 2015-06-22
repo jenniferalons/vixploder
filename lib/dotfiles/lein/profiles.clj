@@ -2,6 +2,7 @@
  {:plugins [[jonase/eastwood "0.2.1"]
             [com.palletops/lein-shorthand "0.4.0"]
             [org.clojure/tools.namespace "0.2.10"]
+            [mvxcvi/whidbey "1.0.0"]
             ]
   :dependencies [[com.gfredericks/repl-utils "0.2.4"]
                  [com.gfredericks/debug-repl "0.0.6"]
@@ -21,4 +22,16 @@
                  com.gfredericks.debug-repl/break!
                  com.gfredericks.debug-repl/unbreak!
                  com.gfredericks.debug-repl/unbreak!!
-                 ]}}}
+                 ]}
+  :whidbey {:sort-keys true
+            :print-fallback :print
+            :print-color true
+            :color-scheme {:delimiter [:red]
+                           :nil       [:white]
+                           :string    [:magenta]
+                           :character [:magenta]
+                           :keyword   [:yellow]
+                           :function-symbol [:cyan]
+                           :class-delimiter [:cyan]
+                           :class-name      [:blue]}}
+}}
