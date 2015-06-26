@@ -3,6 +3,7 @@
             [com.palletops/lein-shorthand "0.4.0"]
             [org.clojure/tools.namespace "0.2.10"]
             [mvxcvi/whidbey "1.0.0"]
+            [cider/cider-nrepl "0.9.0"]
             ]
   :dependencies [[com.gfredericks/repl-utils "0.2.4"]
                  [com.gfredericks/debug-repl "0.0.6"]
