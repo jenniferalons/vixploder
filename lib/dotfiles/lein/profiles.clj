@@ -1,7 +1,7 @@
 {:user
  {:plugins [[jonase/eastwood "0.2.1"]
             [com.palletops/lein-shorthand "0.4.0"]
-            [org.clojure/tools.namespace "0.2.10"]
+            [org.clojure/tools.namespace "0.2.11"]
             [mvxcvi/whidbey "1.0.0"]
             [cider/cider-nrepl "0.9.0"]
             ]
