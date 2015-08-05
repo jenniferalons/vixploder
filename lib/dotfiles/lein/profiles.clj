@@ -18,6 +18,7 @@
                  clojure.repl/source
                  com.gfredericks.repl.bg/bg
                  com.gfredericks.repl/dir
+                 com.gfredericks.repl/pp
                  com.gfredericks.repl/run-all-tests
                  clojure.tools.namespace.repl/refresh
                  com.gfredericks.debug-repl/break!
