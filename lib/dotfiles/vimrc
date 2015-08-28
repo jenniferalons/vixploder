@@ -28,6 +28,7 @@ Bundle 'guns/vim-clojure-static'
 Bundle 'guns/vim-clojure-highlight'
 Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'tpope/vim-salve'
+Bundle 'neilagabriel/vim-geeknote'
 " Bundle 'jimenezrick/vimerl'
 
 "
@@ -118,6 +119,9 @@ map <Leader>E :Explore<CR>
 " vim-fireplace
 map <Leader>e :Eval<CR>
 map <Leader>r :%Eval<CR>
+
+" geeknote
+map <Leader>g :Geeknote<CR>
 
 " " Folds
 " map <Leader>f :set fdm=indent<CR>
