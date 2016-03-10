@@ -28,7 +28,7 @@ Bundle 'guns/vim-clojure-static'
 Bundle 'guns/vim-clojure-highlight'
 Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'tpope/vim-salve'
-Bundle 'neilagabriel/vim-geeknote'
+" Bundle 'neilagabriel/vim-geeknote'
 " Bundle 'jimenezrick/vimerl'
 
 "

@@ -5,9 +5,9 @@
             [mvxcvi/whidbey "1.0.0"]
             [cider/cider-nrepl "0.9.0"]
             ]
-  :dependencies [[com.gfredericks/repl-utils "0.2.4"]
-                 [com.gfredericks/debug-repl "0.0.6"]
-                 [org.clojure/tools.nrepl "0.2.8"]
+  :dependencies [[com.gfredericks/repl-utils "0.2.7"]
+                 [com.gfredericks/debug-repl "0.0.7"]
+                 [org.clojure/tools.nrepl "0.2.11"]
                  ]
   :repl-options {:nrepl-middleware
                  [com.gfredericks.debug-repl/wrap-debug-repl]}
