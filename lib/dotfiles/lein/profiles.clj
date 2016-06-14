@@ -6,8 +6,9 @@
             [cider/cider-nrepl "0.9.0"]
             ]
   :dependencies [[com.gfredericks/repl-utils "0.2.7"]
-                 [com.gfredericks/debug-repl "0.0.7"]
+                 [com.gfredericks/debug-repl "0.0.8"]
                  [org.clojure/tools.nrepl "0.2.11"]
+                 [com.gfredericks/clj-usage-graph "0.3.0"]
                  ]
   :repl-options {:nrepl-middleware
                  [com.gfredericks.debug-repl/wrap-debug-repl]}
