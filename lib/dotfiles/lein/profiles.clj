@@ -2,7 +2,7 @@
  {:plugins [[jonase/eastwood "0.2.1"]
             [com.palletops/lein-shorthand "0.4.0"]
             [org.clojure/tools.namespace "0.2.11"]
-            [mvxcvi/whidbey "1.0.0"]
+            [mvxcvi/whidbey "1.3.0"]
             [cider/cider-nrepl "0.9.0"]
             ]
   :dependencies [[com.gfredericks/repl-utils "0.2.7"]
