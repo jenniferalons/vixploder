@@ -42,5 +42,9 @@
   br = branch
   lg = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
   lga = log --all --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
+
+[interactive]
+  diffFilter = diff-so-fancy
+
 [rerere]
-	enabled = 1
+  enabled = 1
