@@ -5,6 +5,8 @@ shopt -s histappend
 bind '"\e[A":history-search-backward'
 bind '"\e[B":history-search-forward'
 
+alias vi=vim
+
 # function parse_git_branch {
 #   ref=$(git-symbolic-ref HEAD 2> /dev/null) || return
 #     echo "("${ref#refs/heads/}")"
@@ -38,7 +40,7 @@ export RUBY_GC_HEAP_INIT_SLOTS=100000
 export TMUX_SESSION=$USER
 export TMUX_SOCKET_PATH="/tmp/jalons-mbp"
 
-export PATH=$PATH:$HOME/.rvm/bin
+export PATH=/usr/local/bin:$PATH:$HOME/.rvm/bin
 
 SOCK="/tmp/ssh-agent-$USER-screen"
 if test $SSH_AUTH_SOCK && [ $SSH_AUTH_SOCK != $SOCK ]

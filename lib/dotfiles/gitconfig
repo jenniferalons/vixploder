@@ -16,7 +16,7 @@
 [color "diff"]
   meta = yellow
   frag = magenta
-  old = red
+  old = magenta
   new = cyan
   whitespace = red reverse
 
