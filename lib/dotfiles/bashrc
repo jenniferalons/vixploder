@@ -38,7 +38,7 @@ export RUBY_GC_MALLOC_LIMIT=59000000
 export RUBY_GC_HEAP_INIT_SLOTS=100000
 
 export TMUX_SESSION=$USER
-export TMUX_SOCKET_PATH="/tmp/jalons-mbp"
+export TMUX_SOCKET_PATH="/tmp/jalons"
 
 export PATH=/usr/local/bin:$PATH:$HOME/.rvm/bin
 
